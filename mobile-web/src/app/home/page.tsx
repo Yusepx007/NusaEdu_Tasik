@@ -52,7 +52,7 @@ export default function HomePage() {
   return (
     <div className="page fade-in">
       {/* ── AppBar ── */}
-      <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '52px 20px 16px' }}>
+      <div className="mobile-header" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', padding: '52px 20px 16px' }}>
         <div>
           <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: 1.2, textTransform: 'uppercase', color: 'var(--primary)', background: 'var(--primary-bg)', padding: '3px 10px', borderRadius: 20 }}>
             Explore Tasikmalaya

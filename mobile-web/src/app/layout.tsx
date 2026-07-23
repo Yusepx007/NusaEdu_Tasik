@@ -1,8 +1,9 @@
 import type { Metadata, Viewport } from 'next';
 import '@/styles/globals.css';
+import DesktopNavbar from '@/components/layout/DesktopNavbar';
 
 export const metadata: Metadata = {
-  title: 'NusaEdu Tasikmalaya',
+  title: 'NusaEdu Tasikmalaya — Platform Wisata & UMKM Berbasis AI',
   description: 'Aplikasi edukasi wisata Tasikmalaya — Scan AI, Kuis Interaktif & Komunitas Wisata',
   manifest: '/manifest.json',
   appleWebApp: {
@@ -27,6 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <div className="mesh-bg" />
         <div id="mobile-root">
+          <DesktopNavbar />
           {children}
         </div>
       </body>
