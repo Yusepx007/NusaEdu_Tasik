@@ -170,7 +170,7 @@ export default function HomePage() {
                   background: item.bg,
                   display: 'flex',
                   alignItems: 'center',
-                  justify-content: 'center',
+                  justifyContent: 'center',
                   boxShadow: '0 8px 20px rgba(0, 105, 106, 0.07)',
                   border: '1.5px solid rgba(255, 255, 255, 0.95)',
                   transition: 'transform 0.2s ease',
