@@ -2,7 +2,7 @@
 
 **NusaEdu Tasikmalaya** adalah platform berbasis AI yang dirancang untuk mempromosikan pariwisata dan UMKM di Kota Tasikmalaya. Melalui teknologi Computer Vision dan Gamifikasi, aplikasi ini mengubah pengalaman menjelajah kota menjadi petualangan yang interaktif dan edukatif.
 
-![Preview Antarmuka Aplikasi NusaEdu](/Backend/public/images/nusaedu-preview.png)
+![Preview Antarmuka Aplikasi NusaEdu](https://nusaedu-tasik.vercel.app/home)
 
 ## 🚀 Fitur Unggulan
 
