@@ -44,7 +44,10 @@ export default function DestinationCard({ destination, compact = false }: Props)
           </div>
         )}
         <div className={styles.overlay} />
-        <div className={styles.categoryBadge}>{destination.category}</div>
+        {destination.category && <div className={styles.categoryBadge}>{destination.category}</div>}
+        <div className={styles.ratingBadge}>
+          <span>⭐</span> {destination.rating || '4.8'}
+        </div>
       </div>
       <div className={styles.info}>
         <h4 className={styles.name}>{destination.name}</h4>
