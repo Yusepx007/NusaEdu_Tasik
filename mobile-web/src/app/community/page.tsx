@@ -90,7 +90,9 @@ export default function CommunityPage() {
   const AVATAR_COLORS = ['#6366F1', '#8B5CF6', '#06B6D4', '#10B981', '#F59E0B', '#00696A'];
 
   const filteredPosts = filter === 2
-    ? [...posts].sort((a, b) => b.like_count - a.like_count)
+    ? [...posts].sort((a, b) => (b.like_count || 0) - (a.like_count || 0))
+    : filter === 1
+    ? [...posts].sort((a, b) => new Date(b.created_at || 0).getTime() - new Date(a.created_at || 0).getTime())
     : posts;
 
   return (
@@ -149,10 +151,11 @@ export default function CommunityPage() {
         <div style={{ padding: '0 16px' }}>
           {filteredPosts.map((post, idx) => {
             const isLiked = likedPosts.has(post.id);
-            const likeCount = likeCounts[post.id] ?? post.like_count;
-            const initial = post.user_name?.[0]?.toUpperCase() || 'A';
-            const avatarColor = AVATAR_COLORS[post.user_name.length % AVATAR_COLORS.length];
-            const timeStr = new Date(post.created_at).toLocaleDateString('id-ID', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' });
+            const likeCount = likeCounts[post.id] ?? post.like_count ?? 0;
+            const userName = post.user_name || 'Pengguna NusaEdu';
+            const initial = userName[0]?.toUpperCase() || 'N';
+            const avatarColor = AVATAR_COLORS[userName.length % AVATAR_COLORS.length];
+            const timeStr = post.created_at ? new Date(post.created_at).toLocaleDateString('id-ID', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }) : '';
             const isExpanded = expandedPost === post.id;
 
             return (

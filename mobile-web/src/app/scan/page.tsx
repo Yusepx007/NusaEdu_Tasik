@@ -26,15 +26,20 @@ export default function ScanPage() {
   const startCamera = useCallback(async () => {
     setError('');
     try {
+      if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+        throw new Error('Kamera tidak didukung di browser/perangkat ini.');
+      }
       const stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' }, audio: false });
       streamRef.current = stream;
       if (videoRef.current) {
         videoRef.current.srcObject = stream;
-        await videoRef.current.play();
+        await videoRef.current.play().catch(() => {});
       }
       setCameraOn(true);
-    } catch {
-      setError('Kamera tidak tersedia. Gunakan pilih foto dari galeri.');
+    } catch (err: unknown) {
+      setCameraOn(false);
+      const msg = err instanceof Error ? err.message : 'Kamera tidak tersedia.';
+      setError(`${msg} Silakan pilih foto langsung dari Galeri.`);
     }
   }, []);
 
