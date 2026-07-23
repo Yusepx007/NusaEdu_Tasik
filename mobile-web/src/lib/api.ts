@@ -117,8 +117,17 @@ export const destinationApi = {
 
 // ── Community ─────────────────────────────────────────────────────────────
 export const communityApi = {
-  getPosts: () =>
-    request<import('./types').CommunityPost[]>('/posts'),
+  getPosts: async () => {
+    try {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+      const res = await request<any>('/posts');
+      if (Array.isArray(res)) return res;
+      if (res && Array.isArray(res.data)) return res.data;
+      return [];
+    } catch {
+      return [];
+    }
+  },
 
   createPost: (formData: FormData) =>
     request<{ success: boolean; post: import('./types').CommunityPost }>(

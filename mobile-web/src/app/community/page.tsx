@@ -7,6 +7,7 @@ import type { CommunityPost, Comment } from '@/lib/types';
 import { useRouter } from 'next/navigation';
 
 const FILTERS = ['Semua', 'Terbaru', 'Populer'];
+const AVATAR_COLORS = ['#6366F1', '#8B5CF6', '#06B6D4', '#10B981', '#F59E0B', '#00696A'];
 
 export default function CommunityPage() {
   const router = useRouter();
@@ -22,19 +23,24 @@ export default function CommunityPage() {
 
   useEffect(() => {
     loadPosts();
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const loadPosts = async () => {
+    setIsLoading(true);
+    setError('');
     try {
       const data = await communityApi.getPosts();
-      setPosts(data);
-      // Init like state
+      const safeData = Array.isArray(data) ? data : [];
+      setPosts(safeData);
+
+      // Init like state safely
       const lc: Record<number, number> = {};
       const lp = new Set<number>();
-      data.forEach(p => {
-        lc[p.id] = p.like_count;
-        if (p.is_liked_by_me) lp.add(p.id);
+      safeData.forEach(p => {
+        if (p && typeof p.id === 'number') {
+          lc[p.id] = Number(p.like_count || 0);
+          if (p.is_liked_by_me) lp.add(p.id);
+        }
       });
       setLikeCounts(lc);
       setLikedPosts(lp);
@@ -46,6 +52,7 @@ export default function CommunityPage() {
   };
 
   const handleLike = async (postId: number) => {
+    if (!postId) return;
     const wasLiked = likedPosts.has(postId);
     // Optimistic update
     setLikedPosts(prev => {
@@ -53,7 +60,7 @@ export default function CommunityPage() {
       wasLiked ? s.delete(postId) : s.add(postId);
       return s;
     });
-    setLikeCounts(prev => ({ ...prev, [postId]: (prev[postId] || 0) + (wasLiked ? -1 : 1) }));
+    setLikeCounts(prev => ({ ...prev, [postId]: Math.max(0, (prev[postId] || 0) + (wasLiked ? -1 : 1)) }));
     try {
       await communityApi.toggleLike(postId);
     } catch {
@@ -63,37 +70,47 @@ export default function CommunityPage() {
         wasLiked ? s.add(postId) : s.delete(postId);
         return s;
       });
-      setLikeCounts(prev => ({ ...prev, [postId]: (prev[postId] || 0) + (wasLiked ? 1 : -1) }));
+      setLikeCounts(prev => ({ ...prev, [postId]: Math.max(0, (prev[postId] || 0) + (wasLiked ? 1 : -1)) }));
     }
   };
 
   const loadComments = async (postId: number) => {
-    if (comments[postId]) { setExpandedPost(expandedPost === postId ? null : postId); return; }
+    if (!postId) return;
+    if (comments[postId]) {
+      setExpandedPost(expandedPost === postId ? null : postId);
+      return;
+    }
     try {
       const data = await communityApi.getComments(postId);
-      setComments(prev => ({ ...prev, [postId]: data }));
+      const safeComments = Array.isArray(data) ? data : [];
+      setComments(prev => ({ ...prev, [postId]: safeComments }));
       setExpandedPost(postId);
-    } catch { /* silently fail */ }
+    } catch {
+      setComments(prev => ({ ...prev, [postId]: [] }));
+      setExpandedPost(postId);
+    }
   };
 
   const submitComment = async (postId: number) => {
+    if (!postId) return;
     const content = newComment[postId]?.trim();
     if (!content) return;
     const user = auth.getUser();
     try {
       const res = await communityApi.addComment(postId, content, user?.id);
-      setComments(prev => ({ ...prev, [postId]: [...(prev[postId] || []), res.comment] }));
+      if (res && res.comment) {
+        setComments(prev => ({ ...prev, [postId]: [...(prev[postId] || []), res.comment] }));
+      }
       setNewComment(prev => ({ ...prev, [postId]: '' }));
     } catch { /* silently fail */ }
   };
 
-  const AVATAR_COLORS = ['#6366F1', '#8B5CF6', '#06B6D4', '#10B981', '#F59E0B', '#00696A'];
-
+  const safePosts = Array.isArray(posts) ? posts : [];
   const filteredPosts = filter === 2
-    ? [...posts].sort((a, b) => (b.like_count || 0) - (a.like_count || 0))
+    ? [...safePosts].sort((a, b) => Number(b?.like_count || 0) - Number(a?.like_count || 0))
     : filter === 1
-    ? [...posts].sort((a, b) => new Date(b.created_at || 0).getTime() - new Date(a.created_at || 0).getTime())
-    : posts;
+    ? [...safePosts].sort((a, b) => new Date(b?.created_at || 0).getTime() - new Date(a?.created_at || 0).getTime())
+    : safePosts;
 
   return (
     <div className="page fade-in">
@@ -150,13 +167,16 @@ export default function CommunityPage() {
       ) : (
         <div style={{ padding: '0 16px' }}>
           {filteredPosts.map((post, idx) => {
+            if (!post || typeof post.id !== 'number') return null;
+
             const isLiked = likedPosts.has(post.id);
-            const likeCount = likeCounts[post.id] ?? post.like_count ?? 0;
-            const userName = post.user_name || 'Pengguna NusaEdu';
-            const initial = userName[0]?.toUpperCase() || 'N';
+            const likeCount = likeCounts[post.id] ?? Number(post.like_count || 0);
+            const userName = (post.user_name || 'Pengguna').trim();
+            const initial = userName[0]?.toUpperCase() || 'P';
             const avatarColor = AVATAR_COLORS[userName.length % AVATAR_COLORS.length];
             const timeStr = post.created_at ? new Date(post.created_at).toLocaleDateString('id-ID', { day: '2-digit', month: 'short', hour: '2-digit', minute: '2-digit' }) : '';
             const isExpanded = expandedPost === post.id;
+            const destName = post.destination_name || 'Wisata Tasikmalaya';
 
             return (
               <div key={post.id} style={{ background: 'rgba(255,255,255,0.9)', borderRadius: 24, border: '1.5px solid white', boxShadow: '0 8px 24px rgba(0,0,0,0.07)', marginBottom: 16, overflow: 'hidden', animation: `fadeIn ${0.1 + idx * 0.05}s ease` }}>
@@ -166,18 +186,18 @@ export default function CommunityPage() {
                     <div className="avatar" style={{ width: 40, height: 40, background: avatarColor, fontSize: 15 }}>{initial}</div>
                   </div>
                   <div style={{ flex: 1, minWidth: 0 }}>
-                    <p style={{ fontWeight: 700, fontSize: 14, color: 'var(--text-primary)', margin: 0 }}>{post.user_name}</p>
+                    <p style={{ fontWeight: 700, fontSize: 14, color: 'var(--text-primary)', margin: 0 }}>{userName}</p>
                     <p style={{ fontSize: 11, color: 'var(--text-muted)', margin: 0, display: 'flex', alignItems: 'center', gap: 2 }}>
-                      📍 {post.destination_name}
+                      📍 {destName}
                     </p>
                   </div>
-                  <span style={{ fontSize: 10, color: 'var(--text-muted)' }}>{timeStr}</span>
+                  {timeStr && <span style={{ fontSize: 10, color: 'var(--text-muted)' }}>{timeStr}</span>}
                 </div>
 
                 {/* Image */}
                 {post.image_url && (
                   // eslint-disable-next-line @next/next/no-img-element
-                  <img src={post.image_url} alt={post.destination_name} style={{ width: '100%', height: 240, objectFit: 'cover', display: 'block' }} loading="lazy" />
+                  <img src={post.image_url} alt={destName} style={{ width: '100%', height: 240, objectFit: 'cover', display: 'block' }} loading="lazy" />
                 )}
 
                 {/* Action bar */}
@@ -186,7 +206,7 @@ export default function CommunityPage() {
                     {isLiked ? '❤️' : '🤍'} {likeCount}
                   </button>
                   <button onClick={() => loadComments(post.id)} style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 5, fontFamily: 'Poppins, sans-serif', fontSize: 13, fontWeight: 600, color: 'var(--text-muted)', padding: 0 }}>
-                    💬 {post.comment_count}
+                    💬 {Number(post.comment_count || 0)}
                   </button>
                   <div style={{ flex: 1 }} />
                   <button style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 18, padding: 0 }}>🔖</button>
@@ -196,7 +216,7 @@ export default function CommunityPage() {
                 {post.caption && (
                   <div style={{ padding: '4px 14px 14px' }}>
                     <p style={{ fontSize: 13, color: 'var(--text-secondary)', margin: 0, lineHeight: 1.5 }}>
-                      <span style={{ fontWeight: 700, color: 'var(--text-primary)' }}>{post.user_name} </span>
+                      <span style={{ fontWeight: 700, color: 'var(--text-primary)' }}>{userName} </span>
                       {post.caption}
                     </p>
                   </div>
@@ -205,17 +225,24 @@ export default function CommunityPage() {
                 {/* Comments section */}
                 {isExpanded && (
                   <div style={{ borderTop: '1px solid #F1F5F9', padding: '12px 14px' }}>
-                    {(comments[post.id] || []).map(c => (
-                      <div key={c.id} style={{ display: 'flex', gap: 8, marginBottom: 10 }}>
-                        <div className="avatar" style={{ width: 28, height: 28, background: AVATAR_COLORS[c.user_name.length % AVATAR_COLORS.length], fontSize: 11, borderRadius: '50%' }}>
-                          {c.user_name[0]?.toUpperCase()}
+                    {(comments[post.id] || []).map(c => {
+                      if (!c) return null;
+                      const commentUser = (c.user_name || 'Pengguna').trim();
+                      const commentInitial = commentUser[0]?.toUpperCase() || 'P';
+                      const commentAvatarColor = AVATAR_COLORS[commentUser.length % AVATAR_COLORS.length];
+
+                      return (
+                        <div key={c.id || Math.random()} style={{ display: 'flex', gap: 8, marginBottom: 10 }}>
+                          <div className="avatar" style={{ width: 28, height: 28, background: commentAvatarColor, fontSize: 11, borderRadius: '50%', flexShrink: 0 }}>
+                            {commentInitial}
+                          </div>
+                          <div style={{ flex: 1, background: '#F8FAFC', borderRadius: 12, padding: '8px 12px' }}>
+                            <p style={{ fontSize: 12, fontWeight: 700, margin: 0, color: 'var(--text-primary)' }}>{commentUser}</p>
+                            <p style={{ fontSize: 12, margin: 0, color: 'var(--text-secondary)' }}>{c.content || ''}</p>
+                          </div>
                         </div>
-                        <div style={{ flex: 1, background: '#F8FAFC', borderRadius: 12, padding: '8px 12px' }}>
-                          <p style={{ fontSize: 12, fontWeight: 700, margin: 0, color: 'var(--text-primary)' }}>{c.user_name}</p>
-                          <p style={{ fontSize: 12, margin: 0, color: 'var(--text-secondary)' }}>{c.content}</p>
-                        </div>
-                      </div>
-                    ))}
+                      );
+                    })}
                     <div style={{ display: 'flex', gap: 8, marginTop: 8 }}>
                       <input
                         className="input"
