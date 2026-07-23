@@ -20,12 +20,12 @@
 
 * **📱 Mobile Web Application (Next.js 16 + React 19 + PWA)**:
   * Antarmuka *Mobile-First* modern dengan *smooth micro-animations*, *glassmorphism*, dan performa cepat.
-  * Dukungan **PWA (Progressive Web App)** — dapat di-install di layar utama HPAndroid / iOS.
-  * Navigasi lengkap: Halaman Utam (*Home*), Katalog Destinasi, Detail Destinasi, Kuis Edukasi, Scan AI, Peta Digital, Mitra UMKM, Komunitas, & Profil User.
+  * Dukungan **PWA (Progressive Web App)** — dapat di-install di layar utama HP Android / iOS.
+  * Navigasi lengkap: Halaman Utama (*Home*), Katalog Destinasi, Detail Destinasi, Kuis Edukasi, Scan AI, Peta Digital, Mitra UMKM, Komunitas, & Profil User.
   * Penanganan gambar otomatis (*Image Fallback Resolver*) jika URL gambar dari API backend kosong/gagal muat.
 
 * **🔍 AI Image Scanner (Computer Vision - OpenCV ORB + Lowe's Ratio Test)**:
-  * Pemindaian lansung melalui kamera perangkat atau unggah foto dari galeri.
+  * Pemindaian langsung melalui kamera perangkat atau unggah foto dari galeri.
   * **Analisis Keyakinan AI (Confidence Score 0-100%)**: Menampilkan persentase akurasi pencocokan gambar.
   * **Sistem Anti-Overfitting (Margin Check)**: Mencegah kesalahan identifikasi tempat dengan membandingkan selisih poin kandidat destinasi terbaik dan runner-up.
   * Pengenalan otomatis & enrichment data destinasi (Nama, Deskripsi, Lokasi, Jam Buka, Tiket, Kategori) saat scan berhasil.
