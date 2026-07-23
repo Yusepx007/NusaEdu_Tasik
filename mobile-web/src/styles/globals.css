@@ -42,7 +42,7 @@ html {
 }
 
 body {
-  background: #0f172a;
+  background: var(--bg);
   color: var(--text-primary);
   min-height: 100dvh;
   display: flex;
@@ -59,7 +59,7 @@ body {
   background: var(--bg);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 0 80px rgba(0,0,0,0.5);
+  box-shadow: 0 0 50px rgba(0,0,0,0.06);
   transition: max-width 0.3s ease;
 }
 
@@ -602,20 +602,22 @@ body {
 
 @media (min-width: 768px) {
   body {
-    background: #0f172a;
+    background: var(--bg);
     align-items: flex-start;
   }
 
   #mobile-root {
-    max-width: 1080px;
-    margin: 0 auto;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
-    border-left: 1.5px solid rgba(255, 255, 255, 0.1);
-    border-right: 1.5px solid rgba(255, 255, 255, 0.1);
+    max-width: 100%;
+    width: 100%;
+    box-shadow: none;
+    border: none;
+    background: var(--bg);
   }
 
   .mesh-bg {
-    width: 1080px;
+    width: 100%;
+    left: 0;
+    transform: none;
   }
 
   .desktop-navbar {
@@ -821,7 +823,11 @@ body {
   }
 
   .page {
-    padding-bottom: 50px !important;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    padding-bottom: 60px !important;
   }
 
   .h-scroll {
