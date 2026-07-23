@@ -1,0 +1,43 @@
+name: scan_wisata
+description: Aplikasi Scan Wisata untuk mempelajari sejarah dan mengikuti kuis.
+publish_to: 'none' # Hindari publikasi tidak sengaja
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  google_fonts: ^6.2.1
+  camera: ^0.11.0+2
+  image_picker: ^1.1.2
+  http: ^1.2.2
+  permission_handler: ^11.3.1
+  google_generative_ai: ^0.4.6
+  flutter_map: ^8.2.2
+  latlong2: ^0.9.1
+  cached_network_image: ^3.4.1
+  intl: ^0.19.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^3.0.0
+
+flutter:
+  uses-material-design: true
+
+  # Untuk menambahkan aset gambar lokal, uncomment bagian berikut:
+  # assets:
+  #   - assets/images/
+  #   - assets/icons/
+
+  # Untuk menambahkan font kustom (misal Poppins), uncomment:
+  # fonts:
+  #   - family: Poppins
+  #     fonts:
+  #       - asset: assets/fonts/Poppins-Regular.ttf
+  #       - asset: assets/fonts/Poppins-Bold.ttf
+  #         weight: 700

@@ -1,0 +1,761 @@
+ 
+ 
+ii 
+DAFTAR ISI 
+DAFTAR ISI .......................................................................................................... i 
+DAFTAR LAMPIRAN ......................................................................................... ii 
+BAB 1. PENDAHULUAN ................................................................................... 1 
+1.1 Latar Belakang Masalah .................................................................................. 1 
+1.2 Rumusan Masalah .........................................................................................   2 
+1.3 Tujuan ............................................................................................................. 2 
+1.4 Luaran Program ............................................................................................... 2 
+1.5 Manfaat ........................................................................................................... 2 
+1.6 Kesesuian Dengan Tema PKM........................................................................2 
+BAB 2. TINJAUAN PUSTAKA .......................................................................... 3 
+2.1 Nama Sub-BAB 1 ........................................................................................... 3 
+2.2 Nama Sub-BAB 2  .......................................................................................... 4 
+2.3 Nama Sub-BAB Selanjutnya .......................................................................... 5 
+BAB 3. TAHAP PELAKSANAAN ...................................................................... 6 
+3.1 Nama Sub-BAB 1 .......................................................................................... 7 
+3.2 Nama Sub-BAB 2 .......................................................................................... 7 
+3.3 Nama Sub-BAB Selanjutnya  ........................................................................ 7 
+BAB 4. BIAYA DAN JADWAL KEGIATAN .................................................... 9 
+4.1 Anggaran Biaya ............................................................................................. 9 
+4.2 Jadwal Kegiatan ............................................................................................. 9 
+DAFTAR PUSTAKA ......................................................................................... 10 
+LAMPIRAN ........................................................................................................ 11 
+ 
+DAFTAR LAMPIRAN 
+Lampiran 1. Biodata Ketua, dan Anggota, serta Dosen Pendamping .................... 11 
+Lampiran 2. Justifikasi Anggaran Kegiatan ......................................................... Dst 
+Lampiran 3. Susunan Tim Pengusul dan Pembagian Tugas ................................ Dst 
+Lampiran 4. Surat Pernyataan Ketua Tim Pengusul ............................................ Dst 
+Lampiran 5. Gambaran Teknologi Yang Akan Dikembangkan .......................... Dst 
+Lampiran 6. Hasil Uji Periksa Similaritas Proposal..............................................Dst 
+ 
+ 
+  
+1 
+ 
+ 
+BAB 1. PENDAHULUAN 
+1.1   Latar Belakang Masalah 
+ Perkembangan teknologi digital, khususnya Artificial Intelligence (AI), 
+telah membawa perubahan signifikan dalam berbagai sektor, termasuk 
+pariwisata dan pendidikan. Namun, pemanfaatan teknologi di tempat wisata 
+masih belum optimal, terutama dalam penyampaian informasi sejarah kepada 
+pengunjung. Informasi yang tersedia umumnya masih berupa papan teks yang 
+terbatas, kurang interaktif, dan sering diabaikan oleh pengunjung, khususnya 
+generasi muda. 
+Selain itu, tidak semua tempat wisata menyediakan pemandu, sehingga 
+pengunjung mengalami kesulitan dalam memahami nilai sejarah secara 
+mendalam. Kondisi ini menyebabkan pengalaman wisata menjadi kurang 
+bermakna dan potensi edukasi yang dimiliki suatu destinasi belum 
+dimanfaatkan secara maksimal. Di sisi lain, perkembangan teknologi mobile 
+dan meningkatnya penggunaan smartphone membuka peluang untuk 
+menghadirkan inovasi berbasis digital yang lebih interaktif. 
+Berdasarkan permasalahan tersebut, diperlukan suatu solusi inovatif berupa 
+aplikasi berbasis AI yang mampu mengenali objek wisata melalui proses scan 
+dan menampilkan informasi secara intera ktif dalam bentuk teks, gambar, 
+audio, serta fitur tambahan seperti chatbot dan kuis edukatif. Produk ini 
+diharapkan mampu meningkatkan pengalaman wisata yang lebih menarik, 
+informatif, dan edukatif, serta mendukung pemanfaatan teknologi dalam sektor 
+pariwisata. 
+Keunggulan utama dari solusi ini terletak pada integrasi fitur pengenalan 
+objek berbasis AI dengan chatbot edukatif dan kuis interaktif dalam satu 
+aplikasi. Berbeda dengan aplikasi wisata pada umumnya yang hanya 
+menyajikan informasi statis, sistem i ni mampu memberikan pengalaman 
+belajar yang lebih interaktif, personal, dan adaptif terhadap kebutuhan 
+pengguna. 
+1.2 Rumusan Masalah 
+1. Bagaimana cara meningkatkan penyampaian informasi sejarah di tempat 
+wisata agar lebih menarik dan interaktif?  
+2. Bagaimana memanfaatkan teknologi AI untuk mengenali objek wisata dan 
+menyajikan informasi secara otomatis?  
+3. Bagaimana merancang aplikasi yang mampu meningkatkan pengalaman 
+wisata sekaligus memberikan nilai edukasi bagi pengguna? 
+ 
+2 
+ 
+ 
+1.3 Tujuan 
+1. Mengembangkan aplikasi berbasis AI untuk mengenali objek wisata 
+melalui proses scan.  
+2. Menyediakan informasi sejarah secara interaktif dalam bentuk teks, 
+gambar, audio, dan fitur tambahan.  
+3. Meningkatkan pengalaman wisata yang lebih edukatif, menarik, dan 
+mudah diakses oleh pengguna. 
+1.4 Luaran Kegiatan 
+1. Laporan kemajuan dan laporan akhir kegiatan.  
+2. Prototype aplikasi wisata berbasis AI yang fungsional.  
+3. Akun media sosial sebagai sarana publikasi dan promosi aplikasi. 
+ 
+1.5 Manfaat 
+1. Bagi pengguna, meningkatkan pemahaman sejarah secara interaktif dan 
+mudah diakses.  
+2. Bagi pengelola wisata, meningkatkan daya tarik dan kualitas layanan.  
+3. Bagi sektor pariwisata, mendorong pemanfaatan teknologi digital dan 
+peningkatan kunjungan wisata. 
+ 
+1.6 Kesesuaian Judul Dengan Tema PKM 
+Proposal PKM -KC yang berjudul “Pengembangan Aplikasi Wisata 
+Berbasis AI untuk Edukasi Sejarah Interaktif” sesuai dengan tema PKM nomor 
+6, yaitu Penguatan Pendidikan, Sains, dan Teknologi. Hal ini karena solusi 
+yang diusulkan m emanfaatkan teknologi Artificial Intelligence (AI) dan 
+aplikasi mobile sebagai media edukasi modern untuk meningkatkan 
+pemahaman sejarah secara interaktif. Selain itu, inovasi ini juga mendukung 
+pengembangan teknologi digital dalam sektor pariwisata, sehin gga sejalan 
+dengan upaya peningkatan kualitas pendidikan dan penguatan sains serta 
+teknologi. 
+ 
+BAB 2. TINJAUAN PUSTAKA 
+2.1 Artificial Intelligence dalam Pariwisata 
+Artificial Intelligence (AI) merupakan teknologi yang memungkinkan 
+sistem komputer untuk meniru kemampuan manusia dalam berpikir dan belajar 
+(Russell & Norvig, 2021).  Dalam sektor pariwisata, AI telah banyak 
+dimanfaatkan untuk meningkatkan kualitas layanan, seperti sistem 
+rekomendasi destinasi, chatbot interaktif, serta pengenalan objek wisata. 
+Pemanfaatan AI mampu memberikan pengalaman yang lebih personal dan 
+interaktif bagi pengguna, sehingga meningkatkan kepuasan wisatawan serta 
+efisiensi layanan. 
+3 
+ 
+ 
+2.2 Computer Vision untuk Pengenalan Objek 
+Computer Vision merupakan cabang dari AI yang berfokus pada 
+kemampuan sistem untuk memahami dan menganalisis informasi visual dari 
+gambar atau video. Teknologi ini banyak digunakan dalam proses pengenalan 
+objek, termasuk dalam aplikasi berbasis kamera. Dengan menggunakan 
+algoritma seperti Convolutiona l Neural Network (CNN), sistem dapat 
+mengidentifikasi objek wisata secara akurat berdasarkan ciri visual yang 
+dimiliki. Penerapan computer vision dalam aplikasi ini memungkinkan 
+pengguna memperoleh informasi hanya melalui proses scan objek secara 
+langsung. 
+2.3 Aplikasi Mobile Berbasis Flutter 
+Aplikasi mobile merupakan salah satu media yang paling efektif dalam 
+menyampaikan informasi secara cepat dan mudah diakses. Flutter adalah 
+framework berbasis Dart yang memungkinkan pengembangan aplikasi mobile 
+secara c ross-platform dengan performa yang optimal. Penggunaan Flutter 
+dalam pengembangan aplikasi ini memberikan keunggulan dalam hal 
+kecepatan, tampilan antarmuka yang menarik, serta kemudahan dalam 
+integrasi dengan berbagai layanan backend dan API. 
+2.4 Chatbot dan Natural Language Processing (NLP) 
+Natural Language Processing (NLP) merupakan teknologi yang 
+memungkinkan sistem untuk memahami dan memproses bahasa manusia 
+secara alami. Dalam aplikasi ini, NLP digunakan untuk membangun chatbot 
+yang dapat menjawab per tanyaan pengguna terkait sejarah dan informasi 
+wisata. Dengan dukungan teknologi seperti Gemini API, chatbot dapat 
+memberikan respon yang relevan dan kontekstual, sehingga meningkatkan 
+interaksi antara pengguna dan sistem. 
+2.5 Integrasi Teknologi dalam Aplikasi Wisata 
+Penggabungan berbagai teknologi seperti AI, computer vision, NLP, serta 
+aplikasi mobile menciptakan sistem yang terintegrasi dan inovatif. Integrasi ini 
+memungkinkan pengguna untuk mendapatkan informasi wisata secara lengkap 
+melalui satu aplik asi. Selain itu, sistem yang terintegrasi juga memudahkan 
+pengembangan fitur tambahan seperti kuis interaktif, rekomendasi destinasi, 
+serta navigasi berbasis GPS. Dengan demikian, aplikasi ini tidak hanya 
+berfungsi sebagai sumber informasi, tetapi juga seb agai media edukasi dan 
+eksplorasi wisata yang modern. 
+4 
+ 
+ 
+Beberapa aplikasi seperti Google Lens dan aplikasi museum digital telah 
+memanfaatkan teknologi pengenalan objek untuk memberikan informasi visual 
+kepada pengguna. Namun, aplikasi tersebut belum mengintegrasikan fitur 
+edukatif seperti chatbot berbasis AI dan kuis interaktif dalam satu sistem. Oleh 
+karena itu, solusi yang diusulkan memiliki keunggulan dalam aspek edukasi 
+interaktif dan pengalaman pengguna yang lebih komprehensif. 
+BAB 3. TAHAP PELAKSANAAN 
+3.1 Tahap Login dan Akses Pengguna 
+Pada tahap ini, pengguna melakukan login ke dalam aplikasi menggunakan 
+akun yang telah terdaftar. Sistem akan melakukan autentikasi data pengguna 
+melalui backend untuk memastikan keamanan akses. Setelah berhasil lo gin, 
+pengguna dapat mengakses seluruh fitur utama aplikasi. 
+3.2 Tahap Scan Objek Wisata 
+Setelah login, pengguna dapat menggunakan fitur scan untuk mengenali 
+objek wisata. Proses ini dilakukan melalui kamera perangkat yang terintegrasi 
+dalam aplikasi. Gamba r yang diambil akan dikirim ke sistem untuk diproses 
+lebih lanjut oleh teknologi AI. 
+3.3 Tahap Proses AI 
+Pada tahap ini, sistem menggunakan teknologi Artificial Intelligence, 
+khususnya computer vision, untuk menganalisis objek yang telah discan. 
+Model AI a kan mengenali objek berdasarkan data yang telah dilatih 
+sebelumnya, kemudian mencocokkannya dengan database untuk mendapatkan 
+informasi yang relevan. 
+Proses pengenalan objek dilakukan menggunakan model Convolutional 
+Neural Network (CNN) yang dilatih menggunakan dataset gambar objek 
+wisata. Dataset diperoleh dari sumber sekunder seperti internet dan 
+dokumentasi lapangan untuk meningkatkan akurasi sistem dalam mengenali 
+objek. 
+3.4 Tahap Menampilkan Hasil 
+Setelah proses AI selesai, sistem akan menampilkan hasil berupa informasi 
+wisata secara lengkap, meliputi deskripsi sejarah, gambar, serta fitur tambahan 
+seperti audio. Informasi disajikan secara interaktif agar mudah dipahami oleh 
+pengguna. 
+5 
+ 
+ 
+3.5 Tahap Interaksi Chatbot dan Kuis 
+Pada tahap akhir, pengguna  dapat berinteraksi dengan chatbot untuk 
+bertanya mengenai informasi wisata. Selain itu, tersedia fitur kuis interaktif 
+untuk menguji pemahaman pengguna terhadap materi yang telah disajikan. 
+Fitur ini bertujuan meningkatkan pengalaman belajar yang lebih me narik dan 
+menyenangkan. 
+ 
+Gambar 1. Alur Sistem Aplikasi Berbasis AI 
+Gambar tersebut menunjukkan alur kerja aplikasi dimulai dari proses login 
+pengguna, dilanjutkan dengan scan objek wisata, kemudian diproses oleh 
+sistem AI, hingga menampilkan hasil inform asi. Selanjutnya, pengguna dapat 
+berinteraksi melalui fitur chatbot dan mengikuti kuis interaktif sebagai bagian 
+dari pengalaman edukasi. 
+3.6 Tahap Pengujian Sistem 
+ Pengujian sistem dilakukan melalui uji fungsionalitas untuk memastikan 
+setiap fitur aplikasi berjalan dengan baik sesuai dengan tujuan yang dirancang. 
+Selain itu, dilakukan uji pengguna (user testing) untuk mengetahui tingkat 
+kemudahan penggunaan dan kepuasan pengguna terhadap aplikasi. Hasil 
+pengujian digunakan sebagai dasar evaluasi dan  pengembangan sistem lebih 
+lanjut. 
+ 
+ 
+ 
+
+6 
+ 
+ 
+BAB 4. BIAYA DAN JADWAL KEGIATAN 
+ 
+4.1 Anggaran Biaya 
+Anggaran biaya dalam kegiatan PKM-KC ini disusun secara efisien dengan 
+mempertimbangkan kebutuhan pengembangan prototype aplikasi berbasis 
+Artificial Intelligence (AI). Alokasi dana difokuskan pada kebutuhan utama 
+seperti bahan pendukung, layanan sistem, transportasi, serta kebutuhan 
+operasional lainnya dengan tetap memperhatikan efektivitas penggunaan dana. 
+Tabel 4.1 Rekapitulasi Rencana Anggaran Biaya 
+No Jenis Pengeluaran Sumber Dana Besaran Dana 
+(Rp) 
+1 Bahan habis pakai (ATK, 
+referensi, data pendukung) 
+Belmawa 1.800.000 
+Perguruan Tinggi  
+Instansi Lain (Jika ada)  
+2 Sewa dan jasa ( server, hosting, 
+tools pendukung) 
+Belmawa 1.000.000 
+Perguruan Tinggi  
+Instansi Lain (Jika ada)  
+3 Transportasi lokal (Observasi 
+dan testing) 
+Belmawa 900.000 
+Perguruan Tinggi  
+Instansi Lain (Jika ada)  
+4 Lain-lain ( Internet, Publikasi, 
+Dokumentasi dan lain-lain)  
+Belmawa 800.000 
+Perguruan Tinggi  
+Instansi Lain (Jika ada)  
+Jumlah 4.500.000 
+Rekap Sumber Dana 
+Belmawa 4.500.000 
+Perguruan Tinggi - 
+Instansi Lain (Jika ada) - 
+Jumlah 4.500.000 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+7 
+ 
+ 
+ 
+4.2 Jadwal Kegiatan 
+Kegiatan PKM-KC ini direncanakan berlangsung selama 4 (empat) bulan 
+dengan tahapan yang sistematis mulai dari perancangan hingga evaluasi 
+produk. Penyusunan jadwal dilakukan untuk memastikan seluruh kegiatan 
+dapat berjalan secara terarah dan tepat waktu. 
+ 
+Tabel 4.2 Jadwal Kegiatan 
+No. Jenis Kegiatan Bulan. Penanggung Jawab 1 2 3 4 
+1. Analisis kebutuhan & 
+perancangan sistem ✔    (1 orang per kegiatan) 
+2. Desain UI/UX aplikasi ✔ ✔    
+3.  Pengembangan aplikasi  ✔ ✔   
+4. Integrasi AI (Gemini 
+API)  ✔ ✔   
+5. Pengujian Sistem   ✔ ✔  
+6. Evaluasi & 
+penyempurnaan    ✔  
+7. Penyusunan Laporan   ✔ ✔  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+8 
+ 
+ 
+DAFTAR PUSTAKA 
+Flutter. (2024). Flutter Documentation. Tersedia pada: https://flutter.dev (Diakses: 
+29 Maret 2026). 
+Google. (2024). Gemini API Documentation. Tersedia pada: https://ai.google.dev 
+(Diakses: 29 Maret 2026). 
+Goodfellow, I., Bengio, Y., & Courville, A. (2016). Deep Learning. MIT Press. 
+Kietzmann, J., Paschen, J., & Treen, E. (2018). Artificial intelligence in advertising: 
+How marketers can leverage AI. Journal of Advertising Research , 58(3), 
+263–267. 
+Laravel. (2024). Laravel Documentation . Tersedia pada: https://laravel.com 
+(Diakses: 29 Maret 2026). 
+MySQL. (2024). MySQL Documentation. Tersedia pada: https://www.mysql.com 
+(Diakses: 29 Maret 2026). 
+Russell, S. & Norvig, P. (2021). Artificial Intelligence: A Modern Approach . 4th 
+ed. Pearson. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+9 
+ 
+ 
+LAMPIRAN 
+Lampiran 1. Biodata Ketua dan Anggota, serta Dosen Pendamping 
+1.1 Biodata Ketua  
+A. Identitas Diri 
+1 Nama Lengkap  De Yusep Purnama Saputra 
+2 Jenis Kelamin Laki-laki 
+3 Program Studi Teknik Informatika 
+4 NIM 2310614004 
+5 Tempat dan Tanggal Lahir  
+6 Alamat E-mail deyusep01@gmail.com  
+7 Nomor Telepon/HP 085871923851 
+B. Kegiatan Kemahasiswaan Yang Sedang/Pernah Diikuti 
+No Jenis Kegiatan Status dalam Kegiatan Waktu dan Tempat 
+1    
+2    
+3    
+C. Penghargaan Yang Pernah Diterima 
+No Jenis Penghargaan Pihak Pemberi Penghargaan Tahun 
+1    
+2    
+3    
+Semua data yang saya isikan dan tercantum dalam biodata ini adalah benar dan 
+dapat dipertanggungjawabkan secara hukum. Apabila di kemudian hari ternyata 
+dijumpai ketidaksesuaian dengan kenyataan, saya sanggup menerima sanksi.  
+ 
+Demikian biodata ini saya bu at dengan sebenarnya untuk memenuhi salah satu 
+persyaratan dalam pengajuan PKM – KC. 
+ 
+Tasikmalaya, 28 Maret 2026 
+Ketua Tim 
+ 
+Tanda Tangan 
+ 
+ 
+(De Yusep Purnama Satria) 
+2310614004. 
+ 
+ 
+ 
+  
+10 
+ 
+ 
+1.2 Biodata Anggota 1 
+A. Identitas Diri 
+1 Nama Lengkap  Muhammad Dwi Arsyad Siddiq 
+2 Jenis Kelamin Laki-laki 
+3 Program Studi Teknik Informatika 
+4 NIM 2510614026 
+5 Tempat dan Tanggal Lahir Bandung, 14 September 2006 
+6 Alamat E-mail Muhammad.dwi.arsyad.siddiq@gmail.com  
+7 Nomor Telepon/HP 087825230387 
+B. Kegiatan Kemahasiswaan Yang Sedang/Pernah Diikuti 
+No Jenis Kegiatan Status dalam Kegiatan Waktu dan Tempat 
+1    
+2    
+3    
+C. Penghargaan Yang Pernah Diterima 
+No Jenis Penghargaan Pihak Pemberi Penghargaan Tahun 
+1    
+2    
+3    
+Semua data yang saya isikan dan tercantum dalam biodata ini adalah benar dan 
+dapat dipertanggungjawabkan secara hukum. Apabila di kemudian hari ternyata 
+dijumpai ketidaksesuaian dengan kenyataan, saya sanggup menerima sanksi.  
+ 
+Demikian biodata ini saya bu at dengan sebenarnya untuk memenuhi salah satu 
+persyaratan dalam pengajuan PKM – KC. 
+ 
+Tasikmalaya, 28 Maret 2026 
+Anggota Tim 
+ 
+Tanda Tangan 
+ 
+(Muhammad Dwi Arsyad 
+Siddiq) 
+2510614026 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+11 
+ 
+ 
+1.3 Biodata Anggota 1 
+D. Identitas Diri 
+1 Nama Lengkap  Dimas Adhyaksa 
+2 Jenis Kelamin Laki-laki 
+3 Program Studi Teknik Informatika 
+4 NIM 2510614010 
+5 Tempat dan Tanggal Lahir Tasikmalaya, 7 Desember 2006 
+6 Alamat E-mail dimasadhy06@gmail.com  
+7 Nomor Telepon/HP 08907922751 
+E. Kegiatan Kemahasiswaan Yang Sedang/Pernah Diikuti 
+No Jenis Kegiatan Status dalam Kegiatan Waktu dan Tempat 
+1    
+2    
+3    
+F. Penghargaan Yang Pernah Diterima 
+No Jenis Penghargaan Pihak Pemberi Penghargaan Tahun 
+1    
+2    
+3    
+Semua data yang saya isikan dan tercantum dalam biodata ini adalah benar dan 
+dapat dipertanggungjawabkan secara hukum. Apabila di kemudian hari ternyata 
+dijumpai ketidaksesuaian dengan kenyataan, saya sanggup menerima sanksi.  
+ 
+Demikian biodata ini saya bu at dengan sebenarnya untuk memenuhi salah satu 
+persyaratan dalam pengajuan PKM – KC. 
+ 
+Tasikmalaya, 28 Maret 2026 
+Anggota Tim 
+ 
+Tanda Tangan 
+ 
+(Dimas Adhyaksa) 
+2510614010 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+12 
+ 
+ 
+ 
+1.3 Biodata Dosen Pendamping 
+A. Identitas Diri 
+1 Nama Lengkap (dengan gelar) Dewanto Rosian Adhy, M.T 
+2 Jenis Kelamin Laki-laki 
+3 Program Studi  
+4 NIP/NUPTK  
+5 Tempat dan Tanggal Lahir  
+6 Alamat E-mail  
+7 Nomor Telepon/HP  
+ 
+B. Riwayat Pendidikan 
+No Jenjang Bidang Ilmu Institusi Tahun Lulus 
+1 Sarjana (S1)    
+2 Magister (S2)    
+3 Doktor (S3)    
+ 
+C. Rekam Jejak Tri Dharma PT 
+Pendidikan / Pengajaran 
+No Nama Mata Kuliah Wajib / Pilihan SKS 
+1    
+2    
+3    
+Penelitian 
+No Judul Penelitian Penyandang Dana Tahun 
+1    
+2    
+3    
+Pengabdian Masyarakat 
+No Judul Pengabdian Masyarakat Penyandang Dana Tahun 
+1    
+2    
+3    
+Semua data yang saya isikan dan tercantum dalam biodata ini adalah benar dan 
+dapat dipertanggungjawabkan secara hukum. Apabila di kemudian hari ternyata 
+dijumpai ketidaksesuaian dengan kenyataan, saya sanggup menerima sanksi.  
+ 
+ 
+ 
+13 
+ 
+ 
+Demikian biodata ini saya buat dengan sebenarnya untuk memenuhi salah satu 
+persyaratan dalam pengajuan PKM – KC. 
+ 
+Tasikmalaya, 28 Maret 2026 
+Dosen Pendamping, 
+ 
+Tanda Tangan 
+ 
+(Dewanto Rosian Adhy, M.T) 
+NIP/NUPTK. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+14 
+ 
+ 
+Lampiran 2. Justifikasi Anggaran Kegiatan 
+Seperti Pada Pedoman Penulisan di Lampiran 4. Buku Pedoman PKM -KC 
+Dibuat dengan Ms.Excel terlebih dahulu 
+Contoh: 
+No Jenis Pengeluaran Volume Harga Satuan 
+(Rp) 
+Total 
+(Rp) 
+1 Belanja Bahan (maks. 60%) 
+ 
+a. Kertas A4 (2 rim) 2 75.000 150.000 
+b. Alat tulis (pulpen, dll)  1 Paket 100.000 100.000 
+c. Referensi/jurnal digital 1 Paket 550.000 550.000 
+d. Pengolahan data & dataset AI 1 Paket 1.000.000 1.000.000 
+SUB TOTAL   1.800.000 
+2 Belanja Sewa (maks. 15%) 
+ 
+a. Hosting server aplikasi 3 Bulan 150.000 450.000 
+b. Domain aplikasi 1 Tahun 150.000 150.000 
+c. Tools/API pendukung 
+(Gemini API, dll) 1 Paket 400.000 400.000 
+SUB TOTAL   1.000.000 
+3 Transportasi lokal (maks. 30 %) 
+ a. Observasi lokasi wisata 3 kali 200.000 600.000 
+b. Testing aplikasi 3 kali 100.000 300.000 
+SUB TOTAL   900.000 
+4 Lain-lain (maks. 15 %) 
+ 
+a. Kuota internet pengembangan 4 bulan 100.000 400.000 
+b. Publikasi media sosial 1 paket 200.000 200.000 
+c. Dokumentasi & editing 1 paket 200.000 200.000 
+SUB TOTAL   800.000 
+GRAND TOTAL   4.500.000 
+GRAND TOTAL (Terbilang Empat Juta Lima Ratus Ribu) 
+ 
+  
+15 
+ 
+ 
+Lampiran 3. Susunan Tim Pengusul dan Pembagian Tugas 
+No Nama / NIM Program 
+Studi Bidang Ilmu 
+Alokasi 
+Waktu (Jam / 
+Minggu) 
+Uraian Tugas 
+1 
+De Yusep 
+Purnama 
+Satria 
+Teknik 
+Informatika 
+Project 
+Manager 
+10  
+Jam/Minggu 
+Mengatur 
+jalannya proyek, 
+koordinasi tim, 
+dan perencanaan 
+sistem 
+2 Muhammad 
+Dwi Arsyad 
+Siddiq 
+Teknik 
+Informatika 
+AI 
+Specialist 
+10 
+Jam/Minggu 
+Mengembangkan 
+sistem AI, 
+chatbot, dan 
+pengolahan data 
+3 
+Dimas 
+Adhyaksa 
+Teknik 
+Informatika 
+Mobile 
+Developer 
+10 
+Jam/Minggu 
+Mengembangkan 
+aplikasi mobile dan 
+integrasi frontend-
+backend 
+ 
+13 
+ 
+ 
+ 
+Lampiran 4. Surat Pernyataan Ketua Tim Pengusul 
+ 
+SURAT PERNYATAAN KETUA TIM PENGUSUL 
+Yang bertanda tangan di bawah ini: 
+Nama Ketua Tim : De Yusep Purnama Satria 
+Nomor Induk Mahasiswa : 2310614004 
+Program Studi : Teknik Informatika 
+Nama Dosen Pendamping : Dewanto Rosian Adhy M.T 
+Perguruan Tinggi : Universitas Mayasari Bakti 
+Judul Proposal PKM : Pengembangan Aplikasi Wisata Berbasis AI 
+untuk Edukasi Sejarah Interaktif 
+ 
+Dengan ini menyatakan bahwa proposal PKM -KC saya dengan judul  yang 
+diusulkan untuk tahun anggaran 2026 adalah:  
+1. Asli karya mahasiswa dan belum pernah dibiayai oleh lembaga atau sumber 
+dana lain.  
+2. Penggunaan kecerdasan buatan/Artificial Intelligence (AI) mengikuti syarat 
+dan ketentuan yang berlaku sesuai dengan Panduan GenAI Direktorat 
+Pembelajaran dan Kemahasiswaan (https://s.id/PanduanGenAI). 
+ 
+Kami berkomitmen untuk menjalankan kegiatan PKM secara sungguh -sungguh 
+hingga selesai. Bilamana di kemudian  hari ditemukan ketidaksesuaian dengan 
+pernyataan ini, maka saya bersedia dituntut dan diproses sesuai dengan ketentuan 
+yang berlaku dan mengembalikan seluruh biaya yang sudah diterima ke kas negara.  
+ 
+Demikian pernyataan ini dibuat dengan sesungguhnya dan  dengan sebenar 
+benarnya. 
+ 
+Tasikmalaya, 28 Maret 2026 
+Yang Menyatakan, 
+ 
+Materai senilai Rp 10.000 
+Tanda tangan (asli TT basah) 
+ 
+(De Yusep Purnama Satria) 
+2310614004                                                                                                                                                                                                                        
+. 
+-------------- PERHATIAN---------------- 
+UNTUK SURAT PENYATAAN KETUA PELAKSANA 
+DICETAK KEMUDIAN DITANDA TANGANI LALU DI SCAN (FULL 
+PAGE ) & KEMUDIAN DIGABUNG DENGAN FILE PDF PROPOSAL 
+  
+14 
+ 
+ 
+ 
+Lampiran 5. Gambaran Teknologi yang akan Dikembangkan 
+ 
+    
+ 
+    
+ 
+
+15 
+ 
+ 
+ 
+   
+ 
+Gambar-gambar pada lampiran ini menunjukkan keseluruhan rancangan sistem 
+aplikasi wisata berbasis Artificial Intelligence (AI) yang dikembangkan sebagai media 
+edukasi sejarah interaktif. Sistem dirancang dalam bentuk aplikasi mobile yang 
+memungkinkan pengg una memperoleh informasi wisata secara cepat, mudah, dan 
+interaktif melalui perangkat smartphone. 
+Secara umum, alur kerja sistem dimulai dari proses login pengguna untuk mengakses 
+aplikasi. Setelah berhasil masuk, pengguna dapat menggunakan fitur scan untu k 
+mengenali objek wisata melalui kamera perangkat. Gambar yang diambil kemudian 
+diproses oleh sistem menggunakan teknologi Artificial Intelligence, khususnya computer 
+vision berbasis model Convolutional Neural Network (CNN), untuk mengidentifikasi 
+objek wisata secara otomatis. 
+Setelah proses analisis selesai, sistem akan menampilkan hasil berupa informasi 
+lengkap mengenai objek wisata, seperti deskripsi sejarah, gambar pendukung, serta 
+informasi tambahan lainnya yang disajikan secara interaktif. Selain itu, aplikasi juga 
+dilengkapi dengan fitur chatbot berbasis Natural Language Processing (NLP) yang 
+memungkinkan pengguna untuk berinteraksi dan mengajukan pertanyaan terkait objek 
+wisata secara langsung. 
+Sebagai pendukung aspek edukasi, sistem menye diakan fitur kuis interaktif yang 
+bertujuan untuk menguji pemahaman pengguna terhadap informasi yang telah diperoleh. 
+Dengan adanya fitur ini, pengguna tidak hanya menerima informasi secara pasif, tetapi 
+juga terlibat secara aktif dalam proses pembelajaran. 
+
+16 
+ 
+ 
+ 
+Secara keseluruhan, integrasi teknologi AI, aplikasi mobile, serta fitur interaktif 
+dalam sistem ini diharapkan mampu meningkatkan pengalaman wisata yang lebih 
+edukatif, menarik, dan inovatif, serta mendukung pemanfaatan teknologi digital dalam 
+sektor pariwisata. 
+Dengan demikian, sistem yang dikembangkan tidak hanya berfungsi sebagai media 
+informasi, tetapi juga sebagai sarana pembelajaran digital yang interaktif dan adaptif. 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+17 
+ 
+ 
+ 
+Lampiran 6. Hasil Uji Periksa Similaritas Proposal (Turtitin, iThenticate atau 
+yang lainnya dengan indeks similaritas 25%) 
