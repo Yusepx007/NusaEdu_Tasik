@@ -5,12 +5,60 @@ import { auth } from '@/lib/auth';
 import type { User } from '@/lib/types';
 
 const NAV_ITEMS = [
-  { label: 'Beranda', path: '/home', icon: '🏠' },
-  { label: 'Destinasi', path: '/destinations', icon: '🌴' },
-  { label: 'Peta Digital', path: '/peta', icon: '🗺️' },
-  { label: 'Mitra UMKM', path: '/umkm', icon: '🏪' },
-  { label: 'Kuis Edukasi', path: '/quiz', icon: '🧠' },
-  { label: 'Komunitas', path: '/community', icon: '💬' },
+  {
+    label: 'Beranda',
+    path: '/home',
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M3 9.5L12 3l9 6.5V20a1 1 0 01-1 1H5a1 1 0 01-1-1V9.5z"/>
+      </svg>
+    ),
+  },
+  {
+    label: 'Destinasi',
+    path: '/destinations',
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/>
+      </svg>
+    ),
+  },
+  {
+    label: 'Peta Digital',
+    path: '/peta',
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/>
+      </svg>
+    ),
+  },
+  {
+    label: 'Mitra UMKM',
+    path: '/umkm',
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"/>
+      </svg>
+    ),
+  },
+  {
+    label: 'Kuis Edukasi',
+    path: '/quiz',
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+      </svg>
+    ),
+  },
+  {
+    label: 'Komunitas',
+    path: '/community',
+    icon: (
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+        <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+      </svg>
+    ),
+  },
 ];
 
 export default function DesktopNavbar() {
@@ -28,7 +76,9 @@ export default function DesktopNavbar() {
         {/* Brand Logo */}
         <div className="desktop-brand" onClick={() => router.push('/home')}>
           <div className="desktop-brand-icon">
-            <span>✨</span>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="2.2">
+              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+            </svg>
           </div>
           <div>
             <h1 className="desktop-brand-title">NusaEdu</h1>
@@ -46,7 +96,7 @@ export default function DesktopNavbar() {
                 className={`desktop-nav-link ${isActive ? 'active' : ''}`}
                 onClick={() => router.push(item.path)}
               >
-                <span className="nav-icon">{item.icon}</span>
+                <span className="nav-icon" style={{ display: 'flex', alignItems: 'center' }}>{item.icon}</span>
                 <span>{item.label}</span>
               </button>
             );
@@ -73,7 +123,12 @@ export default function DesktopNavbar() {
               </div>
               <div className="desktop-user-info">
                 <span className="desktop-user-name">{user.name}</span>
-                <span className="desktop-user-points">🏆 {user.points ?? 0} Poin</span>
+                <span className="desktop-user-points" style={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2l2.4 7.4h7.6l-6.2 4.5 2.4 7.4-6.2-4.5-6.2 4.5 2.4-7.4-6.2-4.5h7.6z"/>
+                  </svg>
+                  {user.points ?? 0} Poin
+                </span>
               </div>
             </div>
           ) : (

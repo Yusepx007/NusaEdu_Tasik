@@ -118,8 +118,10 @@ export default function CommunityPage() {
       <div style={{ padding: '52px 20px 8px' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
           <div>
-            <p style={{ color: 'var(--primary)', fontSize: 12, fontWeight: 600, margin: 0 }}>✨ Explore Together</p>
-            <h1 style={{ fontSize: 26, fontWeight: 800, color: 'var(--text-primary)', margin: 0 }}>Komunitas</h1>
+            <span style={{ color: 'var(--primary)', fontSize: 11, fontWeight: 700, letterSpacing: 1, textTransform: 'uppercase', background: 'var(--primary-bg)', padding: '3px 10px', borderRadius: 20 }}>
+              Berbagi Pengalaman
+            </span>
+            <h1 style={{ fontSize: 26, fontWeight: 800, color: 'var(--text-primary)', margin: '4px 0 0' }}>Komunitas</h1>
           </div>
           <button
             id="btn-upload-post"
@@ -150,8 +152,8 @@ export default function CommunityPage() {
         </div>
       ) : error ? (
         <div className="empty-state">
-          <div className="icon-circle" style={{ background: '#FEE2E2' }}>
-            <span style={{ fontSize: 36 }}>📶</span>
+          <div className="icon-circle" style={{ background: '#FEE2E2', color: '#DC2626' }}>
+            <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
           </div>
           <h3>Gagal memuat feed</h3>
           <p>{error}</p>
@@ -159,9 +161,11 @@ export default function CommunityPage() {
         </div>
       ) : filteredPosts.length === 0 ? (
         <div className="empty-state">
-          <div className="icon-circle"><span style={{ fontSize: 36 }}>📸</span></div>
+          <div className="icon-circle" style={{ color: 'var(--primary)' }}>
+            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+          </div>
           <h3>Belum ada postingan</h3>
-          <p>Jadilah yang pertama berbagi momen wisatamu! 🌟</p>
+          <p>Jadilah yang pertama berbagi momen wisatamu!</p>
           <button className="btn btn-primary btn-sm" style={{ width: 'auto', padding: '10px 24px', marginTop: 8 }} onClick={() => router.push('/community/upload')}>Upload Sekarang</button>
         </div>
       ) : (
@@ -187,8 +191,9 @@ export default function CommunityPage() {
                   </div>
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <p style={{ fontWeight: 700, fontSize: 14, color: 'var(--text-primary)', margin: 0 }}>{userName}</p>
-                    <p style={{ fontSize: 11, color: 'var(--text-muted)', margin: 0, display: 'flex', alignItems: 'center', gap: 2 }}>
-                      📍 {destName}
+                    <p style={{ fontSize: 11, color: 'var(--text-muted)', margin: 0, display: 'flex', alignItems: 'center', gap: 4 }}>
+                      <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                      {destName}
                     </p>
                   </div>
                   {timeStr && <span style={{ fontSize: 10, color: 'var(--text-muted)' }}>{timeStr}</span>}
@@ -202,14 +207,18 @@ export default function CommunityPage() {
 
                 {/* Action bar */}
                 <div style={{ padding: '12px 14px 6px', display: 'flex', alignItems: 'center', gap: 16 }}>
-                  <button id={`btn-like-${post.id}`} onClick={() => handleLike(post.id)} style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 5, fontFamily: 'Poppins, sans-serif', fontSize: 13, fontWeight: 600, color: isLiked ? '#EF4444' : 'var(--text-muted)', padding: 0, transition: 'transform 0.15s', transform: isLiked ? 'scale(1.15)' : 'scale(1)' }}>
-                    {isLiked ? '❤️' : '🤍'} {likeCount}
+                  <button id={`btn-like-${post.id}`} onClick={() => handleLike(post.id)} style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6, fontFamily: 'Poppins, sans-serif', fontSize: 13, fontWeight: 600, color: isLiked ? '#EF4444' : 'var(--text-muted)', padding: 0 }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill={isLiked ? '#EF4444' : 'none'} stroke={isLiked ? '#EF4444' : 'currentColor'} strokeWidth="2">
+                      <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/>
+                    </svg>
+                    {likeCount}
                   </button>
-                  <button onClick={() => loadComments(post.id)} style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 5, fontFamily: 'Poppins, sans-serif', fontSize: 13, fontWeight: 600, color: 'var(--text-muted)', padding: 0 }}>
-                    💬 {Number(post.comment_count || 0)}
+                  <button onClick={() => loadComments(post.id)} style={{ background: 'none', border: 'none', cursor: 'pointer', display: 'flex', alignItems: 'center', gap: 6, fontFamily: 'Poppins, sans-serif', fontSize: 13, fontWeight: 600, color: 'var(--text-muted)', padding: 0 }}>
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                      <path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/>
+                    </svg>
+                    {Number(post.comment_count || 0)}
                   </button>
-                  <div style={{ flex: 1 }} />
-                  <button style={{ background: 'none', border: 'none', cursor: 'pointer', fontSize: 18, padding: 0 }}>🔖</button>
                 </div>
 
                 {/* Caption */}

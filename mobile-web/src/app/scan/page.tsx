@@ -182,7 +182,7 @@ export default function ScanPage() {
               <path d="M3 12h18M3 12l6-6M3 12l6 6"/>
             </svg>
           </button>
-          <h1 style={{ flex: 1, textAlign: 'center', color: cameraOn ? 'white' : 'var(--text-primary)', fontSize: 18, fontWeight: 700, margin: 0 }}>Scan Wisata 🔍</h1>
+          <h1 style={{ flex: 1, textAlign: 'center', color: cameraOn ? 'white' : 'var(--text-primary)', fontSize: 18, fontWeight: 700, margin: 0 }}>Scan Wisata</h1>
           <div style={{ width: 48 }} />
         </div>
       </div>
@@ -200,7 +200,9 @@ export default function ScanPage() {
             {scanResult.recognized === false ? (
               <>
                 <div style={{ background: '#FEF3C7', border: '1.5px solid #FCD34D', borderRadius: 16, padding: '16px 18px', display: 'flex', alignItems: 'flex-start', gap: 12 }}>
-                  <span style={{ fontSize: 28 }}>🔍</span>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#92400E" strokeWidth="2" style={{ flexShrink: 0, marginTop: 2 }}>
+                    <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
+                  </svg>
                   <div>
                     <p style={{ margin: 0, fontWeight: 700, fontSize: 14, color: '#92400E' }}>Tempat tidak dikenali</p>
                     <p style={{ margin: '4px 0 0', fontSize: 12, color: '#78350F', lineHeight: 1.5 }}>
@@ -212,8 +214,8 @@ export default function ScanPage() {
                   Confidence: {Math.round(scanResult.confidence)}% — Perlu minimal 35%
                 </p>
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: 8 }}>
-                  <button className="btn btn-primary" onClick={reset}>📷 Coba Scan Lagi</button>
-                  <button className="btn btn-outline" onClick={() => router.push('/destinations')}>🗺️ Lihat Daftar Wisata</button>
+                  <button className="btn btn-primary" onClick={reset}>Coba Scan Lagi</button>
+                  <button className="btn btn-outline" onClick={() => router.push('/destinations')}>Lihat Daftar Wisata</button>
                 </div>
               </>
             ) : (
@@ -221,7 +223,7 @@ export default function ScanPage() {
               <>
                 <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                   <div className={`badge ${confidencePct >= 70 ? 'badge-success' : 'badge-warning'}`} style={{ fontSize: 12 }}>
-                    {confidencePct >= 70 ? '✅' : '⚠️'} Keyakinan AI: {confidencePct}%
+                    Keyakinan AI: {confidencePct}%
                   </div>
                   {scanResult.kategori && (
                     <span className="badge badge-primary">{scanResult.kategori}</span>
@@ -236,9 +238,24 @@ export default function ScanPage() {
 
                 {(scanResult.lokasi || scanResult.jam_buka || scanResult.tiket) && (
                   <div style={{ background: 'white', borderRadius: 16, padding: '14px 16px', display: 'flex', flexDirection: 'column', gap: 8, boxShadow: 'var(--shadow-sm)' }}>
-                    {scanResult.lokasi && <p style={{ fontSize: 13, color: 'var(--text-secondary)', display: 'flex', gap: 8, margin: 0 }}>📍 <span>{scanResult.lokasi}</span></p>}
-                    {scanResult.jam_buka && <p style={{ fontSize: 13, color: 'var(--text-secondary)', display: 'flex', gap: 8, margin: 0 }}>🕐 <span>{scanResult.jam_buka}</span></p>}
-                    {scanResult.tiket && <p style={{ fontSize: 13, color: 'var(--text-secondary)', display: 'flex', gap: 8, margin: 0 }}>🎟️ <span>{scanResult.tiket}</span></p>}
+                    {scanResult.lokasi && (
+                      <p style={{ fontSize: 13, color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: 8, margin: 0 }}>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                        <span>{scanResult.lokasi}</span>
+                      </p>
+                    )}
+                    {scanResult.jam_buka && (
+                      <p style={{ fontSize: 13, color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: 8, margin: 0 }}>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        <span>{scanResult.jam_buka}</span>
+                      </p>
+                    )}
+                    {scanResult.tiket && (
+                      <p style={{ fontSize: 13, color: 'var(--text-secondary)', display: 'flex', alignItems: 'center', gap: 8, margin: 0 }}>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M2 9a3 3 0 010 6v2a2 2 0 002 2h16a2 2 0 002-2v-2a3 3 0 010-6V7a2 2 0 00-2-2H4a2 2 0 00-2 2v2z"/></svg>
+                        <span>{scanResult.tiket}</span>
+                      </p>
+                    )}
                   </div>
                 )}
 
@@ -250,10 +267,10 @@ export default function ScanPage() {
 
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 10, marginTop: 'auto' }}>
                   <button id="btn-lihat-detail" className="btn btn-primary" onClick={() => router.push('/destinations')}>
-                    Lihat Destinasi 🗺️
+                    Lihat Destinasi
                   </button>
                   <button id="btn-mulai-kuis" className="btn btn-secondary" onClick={() => router.push('/quiz')}>
-                    Mulai Kuis 🧠
+                    Mulai Kuis
                   </button>
                   <button id="btn-simpan-scan" className="btn btn-outline" onClick={saveScan}>
                     Simpan Kunjungan (+poin)
@@ -304,8 +321,10 @@ export default function ScanPage() {
           {/* Idle (no camera) landing view */}
           {!cameraOn && (
             <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: 20, padding: '110px 32px 200px', minHeight: '100dvh' }}>
-              <div style={{ width: 120, height: 120, borderRadius: '50%', background: 'linear-gradient(135deg, var(--primary-bg), #c8e6e6)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 8px 24px rgba(0,105,106,0.15)' }}>
-                <span style={{ fontSize: 56 }}>📷</span>
+              <div style={{ width: 120, height: 120, borderRadius: '50%', background: 'linear-gradient(135deg, var(--primary-bg), #c8e6e6)', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 8px 24px rgba(0,105,106,0.15)', color: 'var(--primary)' }}>
+                <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8">
+                  <path d="M23 19a2 2 0 01-2 2H3a2 2 0 01-2-2V8a2 2 0 012-2h4l2-3h6l2 3h4a2 2 0 012 2z"/><circle cx="12" cy="13" r="4"/>
+                </svg>
               </div>
               <div style={{ textAlign: 'center' }}>
                 <h2 style={{ fontSize: 22, fontWeight: 800, color: 'var(--text-primary)', margin: '0 0 8px' }}>Scan Wisata AI</h2>
@@ -317,7 +336,7 @@ export default function ScanPage() {
                 <div style={{ background: '#FEE2E2', border: '1px solid #FECACA', borderRadius: 14, padding: '14px 16px', width: '100%', textAlign: 'left' }}>
                   {error.split('\n').map((line, i) => (
                     <p key={i} style={{ margin: i > 0 ? '4px 0 0' : 0, fontSize: i === 0 ? 13 : 12, fontWeight: i === 0 ? 600 : 400, color: i === 0 ? '#DC2626' : '#B91C1C', display: 'flex', alignItems: 'flex-start', gap: 6 }}>
-                      <span style={{ flexShrink: 0 }}>{i === 0 ? '⚠️' : '💡'}</span> {line}
+                      {line}
                     </p>
                   ))}
                 </div>
